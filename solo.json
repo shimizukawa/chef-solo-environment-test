@@ -1,0 +1,11 @@
+{
+	"name": "localhost",
+	"automatic": {},
+	"normal": {},
+	"chef_type": "node",
+	"default": {},
+	"override": {},
+	"run_list": [
+		"role[test]"
+	]
+}

@@ -1,0 +1,16 @@
+{
+	"name": "_default",
+	"description": "",
+	"cookbook_versions": {
+	},
+	"json_class": "Chef::Environment",
+	"chef_type": "environment",
+	"default_attributes": {},
+	"override_attributes": {
+		"myrecipe": {
+			"name": "DEFAULT ENVIRONMENT name",
+			"group": "DEFAULT ENVIRONMENT group",
+			"team": "DEFAULT ENVIRONMENT team"
+		}
+	}
+}

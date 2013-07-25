@@ -1,0 +1,22 @@
+{
+	"name": "test",
+	"default_attributes": {
+		"myrecipe": {
+			"name": "role A",
+			"group": "role B",
+			"team": "role C"
+		}
+	},
+	"override_attributes": {},
+	"json_class": "Chef::Role",
+	"description": "",
+	"chef_type": "role",
+	"run_list": [
+		"recipe[myrecipe::default_env]"
+	],
+	"env_run_lists": {
+		"personal": [
+			"recipe[myrecipe::personal_env]"
+		]
+	}
+}
