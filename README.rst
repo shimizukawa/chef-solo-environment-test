@@ -1,8 +1,8 @@
-==========================================
-chef-solo environment test for chef-11.6.0
-==========================================
+====================================================
+chef-solo environment test for chef-11.6.0 or later
+====================================================
 
-:date: 2013/7/25
+:date: 2013/11/3
 
 What is environment?
 =====================
@@ -100,9 +100,23 @@ environment name in Vagrantfile.
 paratrooper-chef
 ----------------
 
-Not checked.
+capistrano-paratrooper-chef (0.4.0 or later) supports environment feature.
+Below settings in your config/paratrooper.rb generates environment aware solo.rb::
 
-I think if paratrooper-chef will support environment name by using capistrano
-multistage setting and generate environment aware solo.rb, it is very easy to
-manage.
+   set :chef_environment, 'personal'             #set environment name
+   set :chef_environment_path, './environments'  #'environments' is default
+
+A combination with capistrano multistage is very useful.
+This sample project was configured to use multistage. 
+
+Setup with default environment::
+
+   cap default paratrooper:chef
+
+Setup with personal environment::
+
+   cap personal paratrooper:chef
+
+
+see also: https://github.com/tk0miya/capistrano-paratrooper-chef
 
